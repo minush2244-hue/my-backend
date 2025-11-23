@@ -118,6 +118,17 @@
     function redirect(url){
       window.open(url,'_blank');
     }
+    <script>
+fetch("https://my-backend-1-lng8.onrender.com/log", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    page: window.location.pathname,
+    userAgent: navigator.userAgent,
+    time: new Date().toISOString()
+  })
+});
   </script>
 </body>
 </html>
+
